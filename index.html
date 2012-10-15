@@ -36,7 +36,9 @@ css files should be included before any .js file to ensure they are downloaded i
 -->
 <link rel="stylesheet" type="text/css" href="qs_styles.css" />
 <link rel="stylesheet" type="text/css" href="_homebrewer_styles.css" />
-<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" />
+<!--<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" />
+-->
+<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui-1.8.18.custom.css" />
 
 
 <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
@@ -97,6 +99,44 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 </div>
 
 <div id="mainColumn">
+	<div id="header">
+		<div class="floatRight" id="minicart">
+			<div id="minicartText">
+				<span class="itemCount">0</span> item(s) in <span class="underline">cart</span>
+			</div>
+		</div>
+		<div class="floatRight">
+			<div class='clearfix'>
+				<div class='floatLeft decal'>
+					<div id='wrap_header_decal1'>
+						<!-- START SCANALERT CODE -->
+						<a target="_blank"
+						href="https://www.mcafeesecure.com/RatingVerify?ref=www.homebrewers.com"><img
+						width="115" height="32" border="0"
+						src="//images.scanalert.com/meter/www.homebrewers.com/12.gif" alt="McAfee
+						SECURE sites help keep you safe from identity theft, credit card fraud,
+						spyware, spam, viruses and online scams" oncontextmenu="alert('Copying
+						Prohibited by Law - McAfee SECURE is a Trademark of McAfee, Inc.'); return
+						false;"></a>
+						<!-- END SCANALERT CODE --> 
+					</div>
+				</div>
+				<div class='floatRight decal'>
+					<!-- BEGIN ProvideSupport.com Graphics Chat Button Code -->
+					<div id="cim38F" style="z-index:100;position:absolute"></div><div id="scm38F" style="display:inline"></div><div id="sdm38F" style="display:none"></div><script type="text/javascript">var sem38F=document.createElement("script");sem38F.type="text/javascript";var sem38Fs=(location.protocol.indexOf("https")==0?"https":"http")+"://image.providesupport.com/js/0k0ugwicfdaqw0wbyc4hiugfg2/safe-standard.js?ps_h=m38F&ps_t="+new Date().getTime();setTimeout("sem38F.src=sem38Fs;document.getElementById('sdm38F').appendChild(sem38F)",1)</script><noscript><div style="display:inline"><a href="http://www.providesupport.com?messenger=0k0ugwicfdaqw0wbyc4hiugfg2">Customer Support Chat</a></div></noscript>
+					<!-- END ProvideSupport.com Graphics Chat Button Code -->
+				</div>
+			</div>
+			<form id='headerSearchFrm' name='headerSearchFrm' action='#' class='productSearchForm' method="get">
+				<input type='search' name='KEYWORDS' value="Enter part type or product number" class="productSearchKeyword handleDefault" />
+				<input type='hidden' name='CATALOG' value='' class="productSearchCatalog" />
+				<input class="search pointer" id='headerSearchSubmit' type="submit" value="" />
+			</form>
+		</div>
+		<img class="pointer floatRight" onClick="showContent('category',{'navcat':'.100__satisfaction_guarantee'}); return false;" src="img/guarantee.png" width="188" height="67" />
+	</div>
+	<div id="navbar">
+	</div>
 	<div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
 	<div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
 </div>

@@ -30,6 +30,10 @@ html , body{
 	border-radius: 5px;
 }
 
+#leftColumn, #mainColumn {
+	margin-top: 10px;
+}
+
 #leftColumn {
 	width: 174px;
 	margin-left: 10px;
@@ -42,6 +46,10 @@ html , body{
 	text-align: left;
 }
 
+#leftColumn img{
+	margin-bottom: 15px;
+}
+
 #leftColumn h2 {
 	background: #761117;
 	color: white;
@@ -49,12 +57,41 @@ html , body{
 	font-size: .85em;
 	padding: 3px;
 	text-indent: 3px;
+	margin-top: 5px;
+}
+
+#leftColumn div a {
+	border-bottom: 1px solid #E0C286;
+}
+
+#leftColumn div a:last-of-type {
+	border-bottom: 0px;
 }
 
 #mainColumn {
 	width: 796px;
 	margin-right: 10px;
 	float: right;
+}
+
+#header > div {
+	margin-left: 30px;
+}
+
+#minicart {
+	width: 171px;
+	height: 65px;
+	background: url(img/hb12_spritebg.png) top left no-repeat;
+	background-clip: border-box;
+	background-position: -240px -41px;
+	position: relative;
+}
+
+#minicartText {
+	position: absolute;
+	right: 40px;
+	bottom: 8px;
+	font-size: .8em;
 }
 
 #footer {
