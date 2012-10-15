@@ -1,0 +1,66 @@
+html , body{
+	padding: 0px;
+	margin: 0px;
+	background: #d5b474;
+	font-family: "Century Gothic", sans-serif;
+}
+
+#appPreView, #appView{
+	background: #d5b474;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+#appView {
+	background: url(img/bodybg.png) top center no-repeat, #d5b474;
+ }
+ 
+ 
+.contentHolder {
+	width: 1000px;
+	margin: 0px auto;
+	background: white;
+	min-height: 100%; 
+	box-shadow: 0px 0px 20px black;
+}
+
+#appPreView .contentHolder {
+	width: 500px;
+	border-radius: 5px;
+}
+
+#leftColumn {
+	width: 174px;
+	margin-left: 10px;
+	float: left;
+	
+	text-align: center;
+}
+
+#leftColumn div {
+	text-align: left;
+}
+
+#leftColumn h2 {
+	background: #761117;
+	color: white;
+	font-weight: normal;
+	font-size: .85em;
+	padding: 3px;
+	text-indent: 3px;
+}
+
+#mainColumn {
+	width: 796px;
+	margin-right: 10px;
+	float: right;
+}
+
+#footer {
+	display: block;
+	clear: both;
+	width: 100%;
+	height: 500px;
+	margin: 0px;
+}

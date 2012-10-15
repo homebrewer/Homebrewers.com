@@ -15,10 +15,10 @@ var _gaq = _gaq || {'push':function(){}} //here for testing. REMOVE BEFORE DEPLO
 var myCreole;
 
 var app = {vars:{
-	"release":"20120912074300",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121012030000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
-	"httpsURL":"https://ssl.zoovy.com/s=www.sporks.zoovy.com/",
-	"httpURL":"http://www.sporks.zoovy.com/"
+	"httpsURL":"https://ssl.zoovy.com/s=www.homebrewers.com",
+	"httpURL":"http://www.homebrewers.com/"
 	},u:{}};
 
 //set base url so images, css, js, etc all load from appropriate location once deployed.
@@ -35,6 +35,7 @@ all css includes need to be after the js that changes the base url.
 css files should be included before any .js file to ensure they are downloaded in parallel
 -->
 <link rel="stylesheet" type="text/css" href="qs_styles.css" />
+<link rel="stylesheet" type="text/css" href="_homebrewer_styles.css" />
 <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" />
 
 
@@ -42,27 +43,24 @@ css files should be included before any .js file to ensure they are downloaded i
 <script type="text/javascript" src="loadscript.js"></script>
 
 <script type="text/javascript">
-app.u.loadScript(app.vars.baseURL+"init.js");
+app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 </script>
 
 
 </head>
 
 <body>
-<!-- DELETE THIS WHEN YOU GET STARTED -->
-<h1>WELCOME TO QUICKSTART</h1>
-This file is intended to go along with the 10-step tutorial at: 
-<a href="https://github.com/zoovy/AnyCommerce-Development/wiki/quickstart">https://github.com/zoovy/AnyCommerce-Development/wiki/quickstart</a>
-<!-- /DELETE THIS WHEN YOU GET STARTED -->
 
 
 
 
 <!-- what is displayed onLoad until the view is loaded -->
 <div id='appPreView'>
+<div class="contentHolder">
 <table>
 <tr>
-	<td><!-- put logo here --></td>
+	<td>
+	<img src="img/logo.jpg" width="153" height="119" /></td>
 	<td>
 	<h3>One moment please.</h3>
 	
@@ -76,26 +74,39 @@ This file is intended to go along with the 10-step tutorial at:
 </tr>
 </table>
 </div>
+</div>
 
 
 
 <div id='appView' class='displayNone'>
-
-<!-- VIEW CONTENT -->
-<!-- leave the appView div, put your your html here ...  -->
-
-	<!-- 
-	** REMINDER : DO NOT PUT ANY GRAPHICS/CONTENT THAT SHOULD NOT APPEAR ON EVERY PAGE IN THE VIEW (HERE)
-	**				  INSTEAD PUT THEM INTO <div id="homepageTemplate"></div>
-	-->
-<div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
-<div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
-
-
-<!-- ... your html ends -->
-<!-- /VIEW CONTENT -->
+<div class="contentHolder">
+<div id="leftColumn">
+	<img class="pointer" onClick="showContent('category',{'navcat':'.'}); return false;" src="img/logo.jpg" width="153" height="119" />
+	<div>
+		<h2>BEER MAKING SUPPLIES</h2>
+	</div>
+	<div>
+		<h2>WINE MAKING SUPPLIES</h2>
+	</div>
+	<div>
+		<h2>RELATED ITEMS</h2>
+	</div>
+	<div>
+		<h2>NEWSLETTER</h2>
+	</div>
 </div>
 
+<div id="mainColumn">
+	<div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
+	<div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
+</div>
+
+<div id="footer">
+	
+</div>
+
+</div>
+</div>
 
 
 
