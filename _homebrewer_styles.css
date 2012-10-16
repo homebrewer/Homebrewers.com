@@ -2,7 +2,11 @@ html , body{
 	padding: 0px;
 	margin: 0px;
 	background: #d5b474;
-	font-family: "Century Gothic", sans-serif;
+}
+
+body {
+	font-family: trebuchet,"trebuchet MS",helvetica,sans-serif;
+    font-size: 80%;
 }
 
 #appPreView, #appView{
@@ -46,26 +50,12 @@ html , body{
 	text-align: left;
 }
 
-#leftColumn img{
-	margin-bottom: 15px;
+.logo {
+	margin: 10px;
 }
 
-#leftColumn h2 {
-	background: #761117;
-	color: white;
-	font-weight: normal;
-	font-size: .85em;
-	padding: 3px;
-	text-indent: 3px;
-	margin-top: 5px;
-}
-
-#leftColumn div a {
-	border-bottom: 1px solid #E0C286;
-}
-
-#leftColumn div a:last-of-type {
-	border-bottom: 0px;
+#leftColumn .logo {
+	margin-top: 0px;
 }
 
 #mainColumn {
@@ -93,6 +83,76 @@ html , body{
 	bottom: 8px;
 	font-size: .8em;
 }
+
+.decal {
+	height: 45px;
+	overflow: hidden;
+}
+
+form {
+	display: inline;
+}
+
+#headerSearchFrm #headerSearchSubmit {
+	background: url(img/hb12_spritebg.png) top left no-repeat;
+	background-position: -314px -6px;
+	float: left;
+    height: 18px;
+    margin-left: 4px;
+    width: 22px;
+	border: 0px;
+}
+
+#headerKeywordsInput {
+    border: 1px solid #0A3424;
+    float: left;
+    font-size: 11px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 3px;
+    width: 200px;
+	
+}
+
+.hbSpriteBG {
+    background: url("img/hb12_spritebg.png") no-repeat scroll 0 0 transparent;
+}
+
+.redGrit {
+    background: url("img/hb12_redgrit-1230x27.jpg") repeat-x scroll 0 0 transparent;
+}
+
+.center {
+	text-align: center;
+}
+
+.leftCats	{margin-bottom:10px; padding: 0px; margin-top: 0px;}
+
+.leftCats li	{border-bottom:1px solid #e0c286;  font-size:.9em;}
+.leftCats, .leftCats li {
+    list-style: none outside none;
+}
+.leftCats a	{display:block; padding:4px 10px; color:#022d1d; text-decoration:none;}
+.leftCats li:last-child	{border-bottom:0;}
+
+.leftHeadBG		{height:27px; background-color:#761117;}
+
+
+/* the background image is set in the hbspritebg class. these just set positioning */
+.beerCatsHead		{background-position:0 -1px;}
+.wineCatsHead		{background-position:0 -30px;}
+.relatedCatsHead		{background-position:0 -58px;}
+.relatedItemsHead		{background-position:0 -58px; display:inline-block; height:27px; width:200px;}
+
+.subscribeHead		{background-position:0 -86px;}
+
+.subscribeContent	{padding:10px;}
+.subscribeContent h6	{margin-bottom:5px;}
+.subscribeInput	{border:1px solid #977d48; font-size:.9em; color:#77787b; padding:0 2px; line-height:.9em; width:147px; margin-bottom:3px;}
+#subscribeSubmit	{width:61px; height:24px; background-position: -23px -61px;}
+
+
+
 
 #footer {
 	display: block;

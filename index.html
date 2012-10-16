@@ -62,7 +62,7 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 <table>
 <tr>
 	<td>
-	<img src="img/logo.jpg" width="153" height="119" /></td>
+	<img class="logo" src="img/logo.jpg" width="153" height="119" /></td>
 	<td>
 	<h3>One moment please.</h3>
 	
@@ -83,23 +83,69 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 <div id='appView' class='displayNone'>
 <div class="contentHolder">
 <div id="leftColumn">
-	<img class="pointer" onClick="showContent('category',{'navcat':'.'}); return false;" src="img/logo.jpg" width="153" height="119" />
-	<div>
-		<h2>BEER MAKING SUPPLIES</h2>
-	</div>
-	<div>
-		<h2>WINE MAKING SUPPLIES</h2>
-	</div>
-	<div>
-		<h2>RELATED ITEMS</h2>
-	</div>
-	<div>
-		<h2>NEWSLETTER</h2>
-	</div>
+	<img class="pointer logo" onClick="showContent('category',{'navcat':'.'}); return false;" src="img/logo.jpg" width="153" height="119" />
+	<div id='beerCatsContainer'>
+	<div class='beerCatsHead leftHeadBG hbSpriteBG'></div>
+	<ul id='beerCatsUL' class='leftCats'>
+<li title="Beer Making Starter Kits"><a href='#top' onClick="myControl.ext.myRIA.util.handlePageContent('category','.aardvarks'); return false;">Beer Making Starter Kits</a></li>
+<li title="Beer Ingredient Kits"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.alpinebrewkits'); return false;">Beer Ingredient Kits</a></li>
+<li title="Beer Making Ingredients"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.brewing_ingredients'); return false;">Beer Making Ingredients</a></li>
+<li title="Beer Making Equipment"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.beerlsupplies'); return false;">Beer Making Equipment</a></li>
+<li title="Kegging Equipment"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.beerlsvkegging'); return false;">Kegging Equipment</a></li>
+<li title="Blichmann Brewing Equipment"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.blichmann_brewing_equipment'); return false;">Blichmann Brewing Equipment</a></li>
+<li title="Beer Bottle Openers"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.glassestshirtsstuff'); return false;">Beer Bottle Openers</a></li>
+<li title="Home Brewing Instructions"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aatdvarks'); return false;">Home Brewing Instructions</a></li>
+<li title="Beer Making Videos"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aatdvarks.videos'); return false;">Beer Making Videos</a></li>
+	</ul>
+</div>
+
+
+
+<div id='wineCatsContainer'>
+	<div class='wineCatsHead leftHeadBG hbSpriteBG'></div>
+	<ul id='wineCatsUL' class='leftCats'>
+<li title="Wine Making Starter Kits"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aasdvarks'); return false;">Wine Making Starter Kits</a></li>
+<li title="Wine Kits"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.tnoirotliqueurs'); return false;">Wine Kits</a></li>
+<li title="Wine Making Supplies"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekitsingredients'); return false;">Wine Making Supplies</a></li>
+<li title="Wine Bottle Openers and Accessories"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.homemadesodaextracts'); return false;">Wine Bottle Openers and Accessories</a></li>
+<li title="Videos and Instructions"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aatdvarks'); return false;">Videos and Instructions</a></li>
+	</ul>
+</div>
+
+
+<div id='relatedCatsContainer'>
+	<div class='relatedCatsHead leftHeadBG hbSpriteBG'></div>
+	<ul id='relatedCatsUL' class='leftCats'>
+<li title="Books"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekitsingredients_books'); return false;">Books</a></li>
+<li title="Root Beer and Soda Extracts"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winel'); return false;">Root Beer and Soda Extracts</a></li>
+<li title="Pure Arizona Honey"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.beerm'); return false;">Pure Arizona Honey</a></li>
+<li title="Beer and Wine Labels"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekitsingredients_personalized_labels_'); return false;">Beer and Wine Labels</a></li>
+<li title="Liqueur Making Kits and Extracts"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekz'); return false;">Liqueur Making Kits and Extracts</a></li>
+<li title="Glasses and Gifts"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.wjb'); return false;">Glasses and Gifts</a></li>
+<li title="Gourmet Coffee"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.wjb0'); return false;">Gourmet Coffee</a></li>
+<li title="Discounted Bottle Openers - 30% Off for a Limited Time Only!"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.discounted_bottle_openers'); return false;">Discounted Bottle Openers - 30% Off for a Limited Time Only!</a></li>
+	</ul>
+</div>
+
+
+
+<div id='subscribeContainer'>
+	<div class='subscribeHead leftHeadBG hbSpriteBG'></div>
+	<div class='subscribeContent clearfix'>
+<h6>Sign up and Save!</h6>
+<div id='subscribeMessaging'></div>
+<form action='#' id='subscribeFrmLeftCol' name='subscribeFrmLeftCol' onSubmit="myControl.ext.store_crm.util.handleSubscribe(this.id,{'parentID':'subscribeMessaging'}); return false">
+<input type='email' class='subscribeInput ' maxlength='50' size='30' name='login' id='subscribeLoginLeftCol' value='email address' onFocus="if(this.value == this.defaultValue) this.value =''" onBlur="if(this.value == '') this.value = this.defaultValue" />
+<input type='text'  class='subscribeInput' maxlength='50' size='30' name='fullname' id='subscribeFullnameLeftCol' value='full name' onFocus="if(this.value == this.defaultValue) this.value =''" onBlur="if(this.value == '') this.value = this.defaultValue" />
+<input type='image' src='%PROJECT_URL%/hb12_submit-61x23.png' width='62' height='23' id='subscribeSubmit' alt='join newsletter' class='floatRight' />
+</form>
+	</div><!-- /subscribeContent -->
+</div><!-- /subscribeContainer -->
+
 </div>
 
 <div id="mainColumn">
-	<div id="header">
+	<div id="header" class="clearfix">
 		<div class="floatRight" id="minicart">
 			<div id="minicartText">
 				<span class="itemCount">0</span> item(s) in <span class="underline">cart</span>
@@ -108,7 +154,7 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 		<div class="floatRight">
 			<div class='clearfix'>
 				<div class='floatLeft decal'>
-					<div id='wrap_header_decal1'>
+					<div id='wrap_header_decal'>
 						<!-- START SCANALERT CODE -->
 						<a target="_blank"
 						href="https://www.mcafeesecure.com/RatingVerify?ref=www.homebrewers.com"><img
@@ -128,14 +174,22 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 				</div>
 			</div>
 			<form id='headerSearchFrm' name='headerSearchFrm' action='#' class='productSearchForm' method="get">
-				<input type='search' name='KEYWORDS' value="Enter part type or product number" class="productSearchKeyword handleDefault" />
+				<input type='search' id="headerKeywordsInput" name='KEYWORDS' value="Enter Keyword Search" class="productSearchKeyword handleDefault" />
 				<input type='hidden' name='CATALOG' value='' class="productSearchCatalog" />
 				<input class="search pointer" id='headerSearchSubmit' type="submit" value="" />
 			</form>
 		</div>
 		<img class="pointer floatRight" onClick="showContent('category',{'navcat':'.100__satisfaction_guarantee'}); return false;" src="img/guarantee.png" width="188" height="67" />
 	</div>
-	<div id="navbar">
+	<div id="menu" class="redGrit center">
+		<img width="716" height="27" usemap="#mainMenuMap" alt="" src="img/hb12_menu-716x27.png">
+		<map name="mainMenuMap">
+			<area onclick="showContent('category',{'navcat':'.'}); return false;" title="Home" alt="Home" href="#" coords="1,0,58,25" shape="rect">
+			<area onclick="showContent('company',{'show':'about'}); return false;" title="Company Information" alt="Company Information" href="#" coords="88,0,281,25" shape="rect">
+			<area onclick="showContent('company',{'show':'contact'}); return false;" title="Contact US" alt="Contact Us" href="#" coords="316,0,426,25" shape="rect">
+			<area onclick="showContent('company',{'show':'faq'}); return false;" title="Questions" alt="Questions" href="#" coords="454,0,562,25" shape="rect">
+			<area onclick="showContent('customer',{'show':'myaccount'}); return false;" title="My Account" alt="My Account" href="#" coords="606,0,714,25" shape="rect">
+		</map>
 	</div>
 	<div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
 	<div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
