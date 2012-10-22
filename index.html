@@ -290,11 +290,23 @@ COMMONLY EDITED TEMPLATES
 the homepageTemplate template is loaded into mainContentArea by default when the application loads
 -->
 <div id='homepageTemplate'>
-<div onClick="showContent('category',{'navcat':'.aardvarks'});" class='pointer'><img src='img/hb12_home_beerstarterkits-796x302.jpg' width='796' height='302' action='#' /></div>
-
+<div id="slideshowContainer" class='clearfix'>
+	<div id="slideshowNav"></div>
+	<ul id="wideSlideshow" class="pics slideshow">
+		<img src='images/blank.gif' width='796' height='302' data-bind="var: page(hb_banner_wslideshow_slide1); format: banner; extension:myRIA; editor:banner; wrap:<li>;" />
+		<img src='images/blank.gif' width='796' height='302' data-bind="var: page(hb_banner_wslideshow_slide2); format: banner; extension:myRIA; editor:banner; wrap:<li>;" />
+		<img src='images/blank.gif' width='796' height='302' data-bind="var: page(hb_banner_wslideshow_slide3); format: banner; extension:myRIA; editor:banner; wrap:<li>;" />
+		<img src='images/blank.gif' width='796' height='302' data-bind="var: page(hb_banner_wslideshow_slide4); format: banner; extension:myRIA; editor:banner; wrap:<li>;" />
+		<img src='images/blank.gif' width='796' height='302' data-bind="var: page(hb_banner_wslideshow_slide5); format: banner; extension:myRIA; editor:banner; wrap:<li>;" />
+	</ul>
+</div>
 <div class='clearfix hpBannersRow2'>
-	<div class='floatRight pointer'><a href='http://www.homebrewingvideo.com/' target="youtube"><img src='%PROJECT_URL%/hb12_youtube-392x59.jpg' width="392" height="59" alt='Beer and Wine making videos on Youtube!' /></a></div>
-	<div class='floatLeft pointer' onClick="myControl.ext.myRIA.util.handlePageContent('category','.glassestshirtsstuff');"><img src='%PROJECT_URL%/hb12_b2g1botopen-392x59.jpg' width="392" height="59" alt='Buy two bottle openers get one FREE!' /></div>
+	<div class='floatRight pointer'>
+		<img data-bind="var: page(hb_banner_left1); format: banner; editor: banner; height:59; width:392; extension: myRIA;" width="392" height="59"/>
+	</div>
+	<div class='floatLeft pointer'>
+		<img data-bind="var: page(hb_banner_right1); format: banner; editor: banner; height:59; width:392; extension: myRIA;" width="392" height="59"/>
+	</div>
 </div>
 
 

@@ -57,7 +57,10 @@ app.vars.scripts.push({
 app.vars.scripts.push({'pass':1,'location':app.vars.baseURL+'model.js','validator':function(){return (typeof zoovyModel == 'function') ? true : false;}})
 app.vars.scripts.push({'pass':1,'location':app.vars.baseURL+'includes.js','validator':function(){return (typeof handlePogs == 'function') ? true : false;}})
 
-
+app.vars.scripts.push({'pass':1,'location':app.vars.baseURL+'cycle-2.9999.5.js','validator':function(){
+	app.u.dump("typeof jQuery.cycle:"+typeof jQuery.cycle);
+	return (typeof jQuery().cycle == 'undefined') ? false : true;}
+	})
 
 //used for making text editable (customer address). non-essential. loaded late.
 app.vars.scripts.push({'pass':8,'location':app.vars.baseURL+'jeditable.js','validator':function(){return (typeof $ == 'function' && jQuery().editable) ? true : false;}})
@@ -105,6 +108,19 @@ app.u.appInitComplete = function()	{
 	app.ext.myRIA.template.homepageTemplate.onInits.push(function(P) {
 		//do something.
 		}) //display product blob fields in tabbed format.
+		
+	app.ext.myRIA.template.homepageTemplate.onCompletes.push(function(P) {
+		var $target = $('#wideSlideshow');
+		if($target.children().length > 1)	{
+			$target.cycle({
+				fx:     'fade',
+				speed:  'slow',
+				timeout: 5000,
+				pager:  '#slideshowNav',
+				slideExpr: 'li'
+				});
+			}
+		})
 	}
 
 //gets executed once controller.js is loaded.

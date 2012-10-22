@@ -314,3 +314,36 @@ input.addToCartButton	{background: url(img/hb12_addtocart-154x55.png) top left n
 #cartViewerContents .prodThumb	{margin-right:12px;}
 #checkoutButtonContainer	{float:right; width:180px; text-align:center;}
 #checkoutButtonContainer span	{margin:6px 0; display:block;}
+
+#slideshowContainer  {position:relative; z-index:10; height:302px; width:796px; overflow:hidden; margin-bottom:12px;
+	margin: 20px auto;
+} /* setting height/width and overflow hidden keeps banners from showing up, then hiding once slideshow() is executed. */
+#slideshowContainer  ul, .slideshow li	{list-style:none; margin:0; padding:0; display:inline; float:left; } /* the slides */
+/*.slideshow li img{ width:100%;}*/
+
+#slideshowNav { display: table; border-spacing: 8px; z-index: 50; position: absolute; bottom: 12px; right: 12px; text-align:right; }
+#slideshowNav a {
+	
+	margin: 0 8px; font-size:.9em; 
+	text-decoration: none;
+	display:table-cell;
+	width: 26px;
+	height:26px;
+	line-height: 26px;
+	border-radius: 3px;
+	border: 2px solid white;
+	color:white;
+	background: #333333;
+	text-align: center;
+	font-size: 1em;
+	}
+
+#slideshowNav a.activeSlide, #slideshowNav a.activeSlide:hover {
+	border: 2px solid #fe8b21;
+	}
+
+#slideshowNav a:hover {
+	color: #fe8b21;
+}
+	
+#slideshowNav a:focus { outline: none; }
