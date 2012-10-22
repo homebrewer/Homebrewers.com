@@ -9,6 +9,22 @@ body {
     font-size: 80%;
 }
 
+/* loading classes. do NOT change class name. change styling as needed */
+.loadingBG	{background:url(hb12_red_loading-32x32.gif) no-repeat center center; min-height:28px;}
+
+
+a	{color:#990000;} /* this color should match the color set in zlink */
+a:hover	{color:#990000;}
+
+h1  {font-size:1.6em; color:#000000; font-weight:bold;} /* Used for the page title element */
+
+/* used for the wiki header 1 & 2 */
+h2	{font-size:1.4em; color:#333333; font-weight:bold;}
+h3, legend	{font-size:1.3em; color:#616161; font-weight:bold;}
+h4	{font-size:1.2em; color:#666666; font-weight:bold;}
+h5	{font-size:1.1em; color:#666666; font-weight:bold;}
+h6	{font-size:1em; color:#666666; font-weight:bold;}
+
 #appPreView, #appView{
 	background: #d5b474;
 	padding: 0px;
@@ -63,7 +79,9 @@ body {
 	margin-right: 10px;
 	float: right;
 }
-
+#menu {
+	margin-top: 10px;
+}
 #header > div {
 	margin-left: 30px;
 }
@@ -114,6 +132,10 @@ form {
 	
 }
 
+#mainContentArea {
+    padding: 10px 0;
+}
+
 .hbSpriteBG {
     background: url("img/hb12_spritebg.png") no-repeat scroll 0 0 transparent;
 }
@@ -151,13 +173,144 @@ form {
 .subscribeInput	{border:1px solid #977d48; font-size:.9em; color:#77787b; padding:0 2px; line-height:.9em; width:147px; margin-bottom:3px;}
 #subscribeSubmit	{width:61px; height:24px; background-position: -23px -61px;}
 
+.hpBannersRow2	{margin:10px 0;}
+.featuredItemsHead	{background-position:0 -142px; height:27px; width:200px; display:block;}
 
 
+.mastFootHorRule {
+	height: 27px;
+	margin: 10px;
+}
 
-#footer {
+.clear {
 	display: block;
 	clear: both;
 	width: 100%;
-	height: 500px;
+	height: 1px;
 	margin: 0px;
+	outline: 1px solid green;
 }
+
+a {
+    color: #990000;
+}
+
+#mastFoot { min-height: 300px; }
+
+#mastFoot section	{margin:0 40px;}
+
+#mastFoot section div	{
+	border-right:1px solid #cccccc;
+	height:120px;
+	padding: 10px 20px;
+	width:145px;
+	}
+#mastFoot section div	{
+	box-sizing:content-box;
+	-moz-box-sizing:content-box; /* Firefox */
+	-webkit-box-sizing:content-box; /* Safari */
+	float:left;
+	}
+
+#mastFoot section div:last-child	{border-right:0px; padding-right:0;}
+#mastFoot section div:first-child	{padding-left:0;}
+#footLinks a	{display:block; text-decoration:none; padding-left:12px;}
+
+h4 {
+    color: #666666;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.fourColList	{margin:0 35px;}
+.noListStyle li.fourColListItem	{text-align:center;} /* overrides the noListStyle li align left style */
+
+li.fourColListItem	{
+	float:left; margin:10px 20px; text-align:center;
+	height:170px; /* if height is removed, rows may not be 'level' */
+	width:122px;
+	color:#323232; margin:10px 25px;
+	font-size: 1em;
+	}
+
+li.fourColCatListItem	{
+	font-size:.9em;
+	}
+
+li.fourColCatListItem	.thumbContainer {
+	border:1px solid #700d04;
+	width:120px; height:120px;
+	margin-bottom:5px;
+	}
+
+li.fourColProdListItem	{height:235px;}
+li.fourColProdListItem .prodThumbContainer	{margin-bottom:5px;}
+
+li.fourColProdListItem h5	{font-weight:normal; font-size:.9em; height:58px; overflow:hidden; color:#323232;} /* fixed height so buttons align horizontally - merchant request */
+li.fourColProdListItem h6	{font-weight:bold; font-size:.9em; color:#570a04; margin:5px 0; height:20px;}
+
+/* product list addtocart/choose option buttons */
+.addToCartButton, .ui-widget button.addToCartButton	{width:71px; height:23px; border:0; margin:0; font-size:.1em; text-indent: -9999999px; background-color:none; padding:0;} /* applied to both buttons */
+input.addToCartButton	{background: url(img/hb12_addtocart-154x55.png) top left no-repeat;}
+.chooseOptionsButton	{background-position:-429px 0;}
+.notAvailable	{display:none;} /* used in lists when an item is not purchaseable. hidden because he has 'videos' as product on some pages. */
+
+.prodViewerAddToCartForm .addToCartButton {width:154px; height:55px;} /* product viewer (detail) atc button */
+
+
+/* product details viewer */
+
+
+.prodViewerContainer	{width:796px;}
+#productViewer h1	{color:#022d1d; margin-bottom:6px;}
+#productViewer td.imageContainer	{width:370px; text-align:left;} /* container is bigger than image to handle right spacing */
+#prodThumbs div	{margin-bottom:12px;} /* middle column thumbnail list. applied to each thumb */
+
+#prodViewerAddThis	{margin-top:6px;}
+
+.prodSummaryContainer h6	{margin-bottom:12px; font-weight:normal} /* pid */
+
+.priceContainer	{margin-bottom:12px; font-size:1em;}
+.prodSummaryContainer .basePrice	{color:#022d1d; font-size:1.4em;} /* price */
+.prodSummaryContainer .retailPrice	{color:#000000;} /* msrp */
+.prodSummaryContainer .retailPrice .value	{text-decoration:line-through;}
+.prodSummaryContainer .savings	{color:#000000;} /* price */
+
+.prodSummaryContainer .latency	{margin-bottom:12px;} /* handles margin below stock and latency messaging */
+
+/* if inventory display is disabled, these styles are not used */
+.prodSummaryContainer .instock	{color:#006600;}
+.prodSummaryContainer .outofstock	{color:#660000;}
+
+.prodViewerAddToCartForm fieldset	{margin:12px 0;} /* for around options */
+
+.prodSummaryContainer .addToCartButton {margin:12px 0;} /* add to cart button, product detail view only */
+
+.prodSummaryContainer menu	{padding:12px 0; display:block; clear:both;}
+.prodSummaryContainer menu button	{margin:0 12px 12px 0;}
+
+
+
+.prodViewerAddToCartForm label	{padding-right:6px;}
+.prodViewerAddToCartForm select	{font-size:.9em}
+
+#prodlistAccessories {margin:0;} /* tab container handles padding/margin around product list */
+#prodlistAccessories	li	{width:155px; margin-left:0;}
+
+
+.imageViewerSoloImage	{margin:0 auto;} /* class around solo image that appears in modal on image enlargement */
+
+
+/* write review modal */
+#reviewFrm label	{display:block; text-align:right; float:left; width:150px;}
+#reviewsMessage		{width:250px; height:250px;}
+
+#CRMButtonMenu	{padding:0; margin:0; margin-bottom:12px;}
+#CRMButtonMenu a	{margin-right:20px; color:#000000; text-decoration:underline;}
+
+#tabbedProductContentTD {padding:12px 0;} /* spacing above and below tabs/tab content */
+
+/* cart viewer modal */
+#cartViewerContents .prodThumb	{margin-right:12px;}
+#checkoutButtonContainer	{float:right; width:180px; text-align:center;}
+#checkoutButtonContainer span	{margin:6px 0; display:block;}

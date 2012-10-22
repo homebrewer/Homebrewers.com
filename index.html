@@ -87,15 +87,15 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 	<div id='beerCatsContainer'>
 	<div class='beerCatsHead leftHeadBG hbSpriteBG'></div>
 	<ul id='beerCatsUL' class='leftCats'>
-<li title="Beer Making Starter Kits"><a href='#top' onClick="myControl.ext.myRIA.util.handlePageContent('category','.aardvarks'); return false;">Beer Making Starter Kits</a></li>
-<li title="Beer Ingredient Kits"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.alpinebrewkits'); return false;">Beer Ingredient Kits</a></li>
-<li title="Beer Making Ingredients"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.brewing_ingredients'); return false;">Beer Making Ingredients</a></li>
-<li title="Beer Making Equipment"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.beerlsupplies'); return false;">Beer Making Equipment</a></li>
-<li title="Kegging Equipment"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.beerlsvkegging'); return false;">Kegging Equipment</a></li>
-<li title="Blichmann Brewing Equipment"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.blichmann_brewing_equipment'); return false;">Blichmann Brewing Equipment</a></li>
-<li title="Beer Bottle Openers"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.glassestshirtsstuff'); return false;">Beer Bottle Openers</a></li>
-<li title="Home Brewing Instructions"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aatdvarks'); return false;">Home Brewing Instructions</a></li>
-<li title="Beer Making Videos"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aatdvarks.videos'); return false;">Beer Making Videos</a></li>
+<li title="Beer Making Starter Kits"><a href='#top' onClick="showContent('category',{'navcat':'.aardvarks'}); return false;">Beer Making Starter Kits</a></li>
+<li title="Beer Ingredient Kits"><a href='#top'  onClick="showContent('category',{'navcat':'.alpinebrewkits'}); return false;">Beer Ingredient Kits</a></li>
+<li title="Beer Making Ingredients"><a href='#top'  onClick="showContent('category',{'navcat':'.brewing_ingredients'}); return false;">Beer Making Ingredients</a></li>
+<li title="Beer Making Equipment"><a href='#top'  onClick="showContent('category',{'navcat':'.beerlsupplies'}); return false;">Beer Making Equipment</a></li>
+<li title="Kegging Equipment"><a href='#top'  onClick="showContent('category',{'navcat':'.beerlsvkegging'}); return false;">Kegging Equipment</a></li>
+<li title="Blichmann Brewing Equipment"><a href='#top'  onClick="showContent('category',{'navcat':'.blichmann_brewing_equipment'}); return false;">Blichmann Brewing Equipment</a></li>
+<li title="Beer Bottle Openers"><a href='#top'  onClick="showContent('category',{'navcat':'.glassestshirtsstuff'}); return false;">Beer Bottle Openers</a></li>
+<li title="Home Brewing Instructions"><a href='#top'  onClick="showContent('category',{'navcat':'.aatdvarks'}); return false;">Home Brewing Instructions</a></li>
+<li title="Beer Making Videos"><a href='#top'  onClick="showContent('category',{'navcat':'.aatdvarks.videos'}); return false;">Beer Making Videos</a></li>
 	</ul>
 </div>
 
@@ -104,11 +104,11 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 <div id='wineCatsContainer'>
 	<div class='wineCatsHead leftHeadBG hbSpriteBG'></div>
 	<ul id='wineCatsUL' class='leftCats'>
-<li title="Wine Making Starter Kits"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aasdvarks'); return false;">Wine Making Starter Kits</a></li>
-<li title="Wine Kits"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.tnoirotliqueurs'); return false;">Wine Kits</a></li>
-<li title="Wine Making Supplies"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekitsingredients'); return false;">Wine Making Supplies</a></li>
-<li title="Wine Bottle Openers and Accessories"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.homemadesodaextracts'); return false;">Wine Bottle Openers and Accessories</a></li>
-<li title="Videos and Instructions"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.aatdvarks'); return false;">Videos and Instructions</a></li>
+<li title="Wine Making Starter Kits"><a href='#top'  onClick="showContent('category',{'navcat':'.aasdvarks'}); return false;">Wine Making Starter Kits</a></li>
+<li title="Wine Kits"><a href='#top'  onClick="showContent('category',{'navcat':'.tnoirotliqueurs'}); return false;">Wine Kits</a></li>
+<li title="Wine Making Supplies"><a href='#top'  onClick="showContent('category',{'navcat':'.winekitsingredients'}); return false;">Wine Making Supplies</a></li>
+<li title="Wine Bottle Openers and Accessories"><a href='#top'  onClick="showContent('category',{'navcat':'.homemadesodaextracts'}); return false;">Wine Bottle Openers and Accessories</a></li>
+<li title="Videos and Instructions"><a href='#top'  onClick="showContent('category',{'navcat':'.aatdvarks'}); return false;">Videos and Instructions</a></li>
 	</ul>
 </div>
 
@@ -116,14 +116,14 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 <div id='relatedCatsContainer'>
 	<div class='relatedCatsHead leftHeadBG hbSpriteBG'></div>
 	<ul id='relatedCatsUL' class='leftCats'>
-<li title="Books"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekitsingredients_books'); return false;">Books</a></li>
-<li title="Root Beer and Soda Extracts"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winel'); return false;">Root Beer and Soda Extracts</a></li>
-<li title="Pure Arizona Honey"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.beerm'); return false;">Pure Arizona Honey</a></li>
-<li title="Beer and Wine Labels"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekitsingredients_personalized_labels_'); return false;">Beer and Wine Labels</a></li>
-<li title="Liqueur Making Kits and Extracts"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.winekz'); return false;">Liqueur Making Kits and Extracts</a></li>
-<li title="Glasses and Gifts"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.wjb'); return false;">Glasses and Gifts</a></li>
-<li title="Gourmet Coffee"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.wjb0'); return false;">Gourmet Coffee</a></li>
-<li title="Discounted Bottle Openers - 30% Off for a Limited Time Only!"><a href='#top'  onClick="myControl.ext.myRIA.util.handlePageContent('category','.discounted_bottle_openers'); return false;">Discounted Bottle Openers - 30% Off for a Limited Time Only!</a></li>
+<li title="Books"><a href='#top'  onClick="showContent('category',{'navcat':'.winekitsingredients_books'}); return false;">Books</a></li>
+<li title="Root Beer and Soda Extracts"><a href='#top'  onClick="showContent('category',{'navcat':'.winel'}); return false;">Root Beer and Soda Extracts</a></li>
+<li title="Pure Arizona Honey"><a href='#top'  onClick="showContent('category',{'navcat':'.beerm'}); return false;">Pure Arizona Honey</a></li>
+<li title="Beer and Wine Labels"><a href='#top'  onClick="showContent('category',{'navcat':'.winekitsingredients_personalized_labels_'}); return false;">Beer and Wine Labels</a></li>
+<li title="Liqueur Making Kits and Extracts"><a href='#top'  onClick="showContent('category',{'navcat':'.winekz'}); return false;">Liqueur Making Kits and Extracts</a></li>
+<li title="Glasses and Gifts"><a href='#top'  onClick="showContent('category',{'navcat':'.wjb'}); return false;">Glasses and Gifts</a></li>
+<li title="Gourmet Coffee"><a href='#top'  onClick="showContent('category',{'navcat':'.wjb0'}); return false;">Gourmet Coffee</a></li>
+<li title="Discounted Bottle Openers - 30% Off for a Limited Time Only!"><a href='#top'  onClick="showContent('category',{'navcat':'.discounted_bottle_openers'}); return false;">Discounted Bottle Openers - 30% Off for a Limited Time Only!</a></li>
 	</ul>
 </div>
 
@@ -134,10 +134,10 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 	<div class='subscribeContent clearfix'>
 <h6>Sign up and Save!</h6>
 <div id='subscribeMessaging'></div>
-<form action='#' id='subscribeFrmLeftCol' name='subscribeFrmLeftCol' onSubmit="myControl.ext.store_crm.util.handleSubscribe(this.id,{'parentID':'subscribeMessaging'}); return false">
+<form action='#' id='subscribeFrmLeftCol' name='subscribeFrmLeftCol' onSubmit="app.ext.store_crm.u.handleSubscribe('subscribeFrm'); return false">
 <input type='email' class='subscribeInput ' maxlength='50' size='30' name='login' id='subscribeLoginLeftCol' value='email address' onFocus="if(this.value == this.defaultValue) this.value =''" onBlur="if(this.value == '') this.value = this.defaultValue" />
 <input type='text'  class='subscribeInput' maxlength='50' size='30' name='fullname' id='subscribeFullnameLeftCol' value='full name' onFocus="if(this.value == this.defaultValue) this.value =''" onBlur="if(this.value == '') this.value = this.defaultValue" />
-<input type='image' src='%PROJECT_URL%/hb12_submit-61x23.png' width='62' height='23' id='subscribeSubmit' alt='join newsletter' class='floatRight' />
+<input type='image' src='img/hb12_submit-61x23.png' width='62' height='23' id='subscribeSubmit' alt='join newsletter' class='floatRight' />
 </form>
 	</div><!-- /subscribeContent -->
 </div><!-- /subscribeContainer -->
@@ -195,9 +195,58 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 	<div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
 </div>
 
-<div id="footer">
+	<div id='mastFoot' class='clearfix'>
+
+<div class='redGrit mastFootHorRule'></div>
+
+<section id='footLinks' class='clearfix'>
+	<div>
+<h4>Customer Service</h4>
+<a href='#top' onClick="showContent('company',{'show':'contact'}); return false;">Contact Us</a>
+<a href='#top' onClick="showContent('company',{'show':'about'}); return false;">Company Information</a>
+<a href='#top' onClick="showContent('company',{'show':'shipping'}); return false;">Shipping</a>
+<a href='#top' onClick="showContent('company',{'show':'return'}); return false;">Return Policy</a>
+<a href='#top' onClick="showContent('company',{'show':'payment'}); return false;">Payment Methods</a>
+<a href='#top' onClick="showContent('company',{'show':'privacy'}); return false;">Privacy Policy</a>	
+<!--  -->
+	</div>
+
+	<div>
+<h4>Account</h4>
+<a href='#top' onClick="showContent('customer',{'show':'newsletter'}); return false;">Create Account</a>
+<a href='#top' onClick="showContent('customer',{'show':'myaccount'}); return false;">My Account</a>
+<a href='#top' onClick="showContent('customer',{'show':'myaccount'}); return false;">Recover Password</a>
+<a href='#top' onClick="showContent('customer',{'show':'orders'}); return false;">Order History/Tracking</a>
+<a href='#top' onClick="showContent('customer',{'show':'newsletter'});" return false;>Newsletter</a>
+	</div>
 	
-</div>
+	<div>
+<h4>Videos &amp; Instruction</h4>
+<a href='#top' onClick="showContent('category',{'navcat':'.aatdvarks.videos'}); return false;">Beer/Wine Videos</a>
+<a href='#top' onClick="showContent('category',{'navcat':'.aatdvarks'}); return false;">Brewing Instructions</a>
+<a href='#top' onClick="showContent('category',{'navcat':'.aatdvarks.winemakinginstructions'}); return false;">Winemaking Instructions</a>
+<a href='#top' onClick="showContent('company',{'show':'faq'}); return false;">FAQ</a>
+	</div>
+	<div>
+<h4>Local Information</h4>
+<a href='#top' onClick="showContent('company',{'show':'about'}); return false;">Store Hours</a>
+<a href='#top' onClick="showContent('company',{'show':'about'}); return false;">Local Pick Up</a>
+<a href='#top' onClick="showContent('category',{'navcat':'.local-information.brewing_workshops'}); return false;">Brewing Workshops</a>
+<a href='#top' onClick="showContent('category',{'navcat':'.local-information.winemaking_workshops'}); return false;">Winemaking Workshops</a>
+<a href='#top' onClick="showContent('category',{'navcat':'.local-information.events'}); return false;">Events</a>
+	</div>
+	
+	<div>
+<h4>Specials</h4>
+<a href='#top' onClick="showContent('category',{'navcat':'.promo_landing_pages.brewing_specials'}); return false;">Brewing Specials</a>
+<a href='#top' onClick="showContent('category',{'navcat':'.promo_landing_pages.winemaking_specials'}); return false;">Winemaking Specials</a>
+<a href='#top' onClick="showContent('category',{'navcat':'.promo_landing_pages.other_stuff'}); return false;">Other Stuff</a>
+	</div>
+</section>
+
+	</div>
+	<div class="clear"></div>
+	
 
 </div>
 </div>
@@ -241,14 +290,28 @@ COMMONLY EDITED TEMPLATES
 the homepageTemplate template is loaded into mainContentArea by default when the application loads
 -->
 <div id='homepageTemplate'>
+<div onClick="showContent('category',{'navcat':'.aardvarks'});" class='pointer'><img src='img/hb12_home_beerstarterkits-796x302.jpg' width='796' height='302' action='#' /></div>
 
+<div class='clearfix hpBannersRow2'>
+	<div class='floatRight pointer'><a href='http://www.homebrewingvideo.com/' target="youtube"><img src='%PROJECT_URL%/hb12_youtube-392x59.jpg' width="392" height="59" alt='Beer and Wine making videos on Youtube!' /></a></div>
+	<div class='floatLeft pointer' onClick="myControl.ext.myRIA.util.handlePageContent('category','.glassestshirtsstuff');"><img src='%PROJECT_URL%/hb12_b2g1botopen-392x59.jpg' width="392" height="59" alt='Buy two bottle openers get one FREE!' /></div>
+</div>
+
+
+
+<div >
+	<span class=''></span>
+</div>
+<ul class='noListStyle clearfix' data-bind='var: elastic-native({"size":"4","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:<h2 class="redGrit prodlistHead bestSellersHead hbSpriteBG">Best Sellers</h2>;'></ul>
+<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_multipage:1; before: <div class='redGrit'> <h2 class='featuredItemsHead hbSpriteBG'></h2></div>; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+<!--
 
 	<ul data-bind="var: category(@subcategoryDetail); format: subcategoryList; extension: myRIA; loadsTemplate: categoryListTemplate;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>
 	<ul id='homepageFeaturedItems' data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; hide_multipage:1; before:<h2>Featured Items</h2>; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
 	<p data-bind="var: page(description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
 
 	<ul id='homeProdSearchBestSellers' data-bind='var: elastic-native({"size":"4","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-
+-->
 </div>
 
 
@@ -266,21 +329,21 @@ each of the 'sections' are used to load another template. don't change the id.
 don't modify the 'data-templateid' unless you are changing template names and updating everywhere appropriate.
 -->
 <div id='categoryTemplate' class='loadingBG'>
-
-	<ul id='breadcrumb' class='clearfix noPadOrMargin fluidList' data-bind='var: category(id); format:breadcrumb; extension:store_navcats; loadsTemplate: breadcrumbTemplate;'></ul>
-
-	<img data-bind="var: page(banner1); format: banner; editor: banner; height:250; width:750; extension: myRIA;" />
-
-	<h2 data-bind="var: page(header); format: text; editor: text;"></h2>
 	
-	<p data-bind="var: page(description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
-	
-	<ul data-bind="var: category(@subcategoryDetail); format: subcategoryList; extension: myRIA; loadsTemplate: categoryListTemplate;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>
+		<ul id='breadcrumb' class='clearfix noPadOrMargin fluidList' data-bind='var: category(id); format:breadcrumb; extension:store_navcats; loadsTemplate: breadcrumbTemplate;'></ul>
+		
+		<img data-bind="var: page(banner1); format: imageURL; editor: banner; height:105; width:796; extension: myRIA;" width="796" height="105"/>
 
-	<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-	
-	<p data-bind="var: page(description2); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
+		<h2 data-bind="var: page(header); format: text; editor: text;"></h2>
+		
+		<p data-bind="var: page(description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
+		
+		<ul data-bind="var: category(@subcategoryDetail); format: subcategoryList; extension: myRIA; loadsTemplate: categoryListTemplate;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList fourColList'></ul>
 
+		<ul data-bind="var: category(@products); format: productList; editor: finder; extension: store_prodlist; loadsTemplate: productListTemplate; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList fourColList'></ul>
+		
+		<p data-bind="var: page(description2); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
+	
 		
 </div>
 
@@ -292,8 +355,8 @@ don't modify the 'data-templateid' unless you are changing template names and up
 
 <!-- used to display a category within a 'list', usually in the body of a category or the homepage. -->
 <ul>
-<li id='categoryListTemplate'>
-	<div onClick="showContent('category',{'navcat':$(this).parent().attr('data-catsafeid')});" class='pointer'>
+<li id='categoryListTemplate' class="fourColListItem fourColCatListItem">
+	<div onClick="showContent('category',{'navcat':$(this).parent().attr('data-catsafeid')});" class='pointer '>
 		<div class='thumbContainer'><img src='blank.gif' class='catThumb' data-bind='var: category(%meta.CAT_THUMB); format:imageURL;' width='120' height='120' /></div>
 		<div class='catName white2LGray'><span data-bind='var: category(pretty); format:text;'></span></div>
 	</div>
@@ -317,7 +380,7 @@ Used for the product in a product list (prodlist), usually in the body of a cate
 the loadingBG class is removed (must be that classname) when the template is translated.
 remember to NOT put the button inside the 'onclick' container or two events will occur onclick.
 -->
-<li id='productListTemplate' class='loadingBG  ' onMouseOver="$('.quickView',$(this)).show();" onMouseOut="$('.quickView').hide();" >
+<li id='productListTemplate' class='loadingBG fourColListItem fourColProdListItem' onMouseOver="$('.quickView',$(this)).show();" onMouseOut="$('.quickView').hide();" >
 	
 	<button class='floatRight pointer quickView displayNone' onClick="quickView({'templateID':'productTemplateQuickView','pid':$(this).closest('[data-pid]').attr('data-pid'),'pageType':'product'});">Quickview</button>
 	
@@ -331,8 +394,6 @@ remember to NOT put the button inside the 'onclick' container or two events will
 		<h6 data-bind='var: product(zoovy:base_price); format:money; currencySign: $;  hideZero:true; className:price; pretext: Our Price: ;'></h6>
 		
 		
-		<span data-bind='var: reviews(average); format:addClass; className:review_;' class='reviewSprite'></span>
-<!-- 	<span data-bind='var: reviews(total); format:text; posttext: from ;posttext: reviews; className:numReviews;'></span> -->
 	</div>
 </li>
 
@@ -466,11 +527,16 @@ this will likely become more flexible in the future. ###
 
 <table id='prodViewerTable' class='prodViewerContainer'>
 <tr>
+	<td colspan="2">
+		<h1 data-bind='var: product(zoovy:prod_name); format:text;'></h1>
+	</td>
+</tr>
+<tr>
 	<td class='imageContainer'>
 <div onClick='app.ext.store_product.u.showPicsInModal({"pid":$(this).attr("data-pid")});' class='pointer clearfix'  data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
 
 	<div data-bind="var: product(zoovy:prod_is_tags); format:addTagSpans;" class='tagsContainer'></div>
-	<img src='blank.gif' class='prodBigImage' data-bind='var: product(zoovy:prod_image1); format:imageURL;' width='340' height='340' />
+	<img src='blank.gif' class='prodBigImage' data-bind='var: product(zoovy:prod_image1); format:imageURL;' width='350' height='350' />
 
 </div>
 
@@ -487,11 +553,9 @@ this will likely become more flexible in the future. ###
 	</td>
 
 	<td class='prodSummaryContainer marginBottom no_underline'>
-	<h1 data-bind='var: product(zoovy:prod_name); format:text;'></h1>
 	
-	<h5 class='stid' data-bind='var: product(pid); format:text; pretext: Sku: ;'></h5>
-	<h5 data-bind='var: product(zoovy:prod_mfg); format:searchLink; extension:myRIA; pretext: Mfg: ;'></h5>
-	<h5 data-bind='var: product(zoovy:prod_mfgid); format:text; pretext: Mfg ID: ;'></h5>
+	<h6 class='stid' data-bind='var: product(pid); format:text; pretext: Sku#: ;'></h6>
+	
 	
 	
 	<div class='priceContainer'>
@@ -527,12 +591,12 @@ you'll likely want to something MUCH more custom here. this just simply adds it 
 
 	<section id='prodViewerReviewSummary' class='marginBottom'>
 		<span data-bind='var: reviews(average); format:addClass; className:review_;' class='reviewSprite'></span>
-		<span data-bind='var: reviews(total); format:text;posttext: from ;posttext: reviews; className:numReviews;'></span>
+		<span data-bind='var: reviews(total); format:text;pretext: from ;posttext: reviews; className:numReviews;'></span>
 	</section>
 	
 	<menu data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' id='CRMButtonMenu'>
 
-	<a href='#' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).parent().attr("data-pid"),"templateID":"reviewFrmTemplate"}); return false;'>Write Review</a>	| 
+	<a href='#' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).parent().attr("data-pid"),"templateID":"reviewFrmTemplate"}); return false;'>Write Review</a>
 
 	<a href='#' onClick="app.ext.myRIA.a.add2BuyerList({pid:$(this).parent().attr('data-pid'),'listid':'wishlist'}); return false;">Add to Wishlist</a>
 
