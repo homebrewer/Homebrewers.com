@@ -16,9 +16,9 @@ var myCreole;
 
 var app = {vars:{
 	"release":"20121022033000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
-	"baseURL":"app.homebrewers.com",
+	"baseURL":"",
 	"httpsURL":"https://ssl.zoovy.com/s=www.app.homebrewers.com",
-	"httpURL":"http://www.homebrewers.com/"
+	"httpURL":"http://www.app.homebrewers.com/"
 	},u:{}};
 
 //set base url so images, css, js, etc all load from appropriate location once deployed.
@@ -815,7 +815,9 @@ adding classes is not likely to have any bad effects.
 	
 		<div id='contactArticle' class='displayNone textContentArea'>
 			<h1>Contact Information</h1>
-			<form action='#' onSubmit="app.ext.store_crm.calls.appSendMessage.init($(this).serializeArray(),{'callback':'showMessaging','parentID':'contactFormMessaging','message':'Thank you, your message has been sent'},'immutable'); return false;" id='contactForm' name='contactForm'>
+			<!--<form action='#' onSubmit="app.ext.store_crm.calls.appSendMessage.init($(this).serializeArray(),{'callback':'showMessaging','parentID':'contactFormMessaging','message':'Thank you, your message has been sent'},'immutable'); return false;" id='contactForm' name='contactForm'>
+			-->
+			<form action='#' onSubmit="app.ext.store_crm.calls.appSendMessage.init($(this).serializeJSON(),{'callback':'showMessaging','parentID':'contactFormMessaging','message':'Thank you, your message has been sent'},'immutable'); app.model.dispatchThis('immutable');  return false;" id='contactForm' name='contactForm'>
 			<fieldset>
 				<legend>Contact Us</legend>
 				<div id='contactFormMessaging'></div>
