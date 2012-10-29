@@ -19,7 +19,7 @@ _gaq.push(['_trackPageview']);
 var myCreole;
 
 var app = {vars:{
-	"release":"20121029024200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121029030800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
 	"httpsURL":"https://secure.homebrewers.com/s=app.homebrewers.com/",
 	"httpURL":"http://app.homebrewers.com/"
@@ -196,7 +196,7 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 		</map>
 	</div>
 	<div id='globalMessaging' class='appMessaging'></div><!-- DO NOT REMOVE - used for some high level error handling (usually appears below breadcrumb nav or top bar) -->
-	<div id='mainContentArea'></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
+	<div id='mainContentArea'><div class="loadingBG"></div></div><!-- DO NOT REMOVE - this is where the specific page (ex: homepage, product, category) content is going to go -->
 </div>
 
 	<div id='mastFoot' class='clearfix'>
