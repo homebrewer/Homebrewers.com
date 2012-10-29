@@ -29,6 +29,16 @@ h4	{font-size:1.2em; color:#666666; font-weight:bold;}
 h5	{font-size:1.1em; color:#666666; font-weight:bold;}
 h6	{font-size:1em; color:#666666; font-weight:bold;}
 
+#appPreView table {
+	width: 400px;
+}
+
+#appPreView td h3 {
+	margin-top: 50px;
+}
+#appPreView td.logoholder {
+	width: 160px;
+}
 #appPreView, #appView{
 	background: #d5b474;
 	padding: 0px;
@@ -50,7 +60,7 @@ h6	{font-size:1em; color:#666666; font-weight:bold;}
 }
 
 #appPreView .contentHolder {
-	width: 500px;
+	width: 400px;
 	border-radius: 5px;
 }
 
