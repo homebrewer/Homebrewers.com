@@ -11,13 +11,17 @@
 
 
 <script type="text/javascript">
-var _gaq = _gaq || {'push':function(){}} //here for testing. REMOVE BEFORE DEPLOYMENT!
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-841679-1']);
+_gaq.push(['_trackPageview']);
+
+
 var myCreole;
 
 var app = {vars:{
 	"release":"20121029114200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
-	"httpsURL":"https://ssl.zoovy.com/s=www.app.homebrewers.com",
+	"httpsURL":"https://secure.homebrewers.com/s=app.homebrewers.com",
 	"httpURL":"http://app.homebrewers.com/"
 	},u:{}};
 
