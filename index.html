@@ -146,7 +146,7 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 
 <div id="mainColumn">
 	<div id="header" class="clearfix">
-		<div class="floatRight" id="minicart">
+		<div class="floatRight pointer" id="minicart" onClick="showContent('cart',{}); return false;">
 			<div id="minicartText">
 				<span class="itemCount">0</span> item(s) in <span class="underline">cart</span>
 			</div>
@@ -290,7 +290,7 @@ COMMONLY EDITED TEMPLATES
 the homepageTemplate template is loaded into mainContentArea by default when the application loads
 -->
 <div id='homepageTemplate'>
-<div id="slideshowContainer" class='clearfix'>
+<div id="slideshowContainer" class='clearfix bordered'>
 	<div id="slideshowNav"></div>
 	<ul id="wideSlideshow" class="pics slideshow">
 		<img src='images/blank.gif' width='796' height='302' data-bind="var: page(hb_banner_wslideshow_slide1); format: banner; extension:myRIA; editor:banner; wrap:<li>;" />
@@ -302,10 +302,10 @@ the homepageTemplate template is loaded into mainContentArea by default when the
 </div>
 <div class='clearfix hpBannersRow2'>
 	<div class='floatRight pointer'>
-		<img data-bind="var: page(hb_banner_left1); format: banner; editor: banner; height:59; width:392; extension: myRIA;" width="392" height="59"/>
+		<img class="bordered" data-bind="var: page(hb_banner_left1); format: banner; editor: banner; height:57; width:390; extension: myRIA;" width="390" height="57"/>
 	</div>
 	<div class='floatLeft pointer'>
-		<img data-bind="var: page(hb_banner_right1); format: banner; editor: banner; height:59; width:392; extension: myRIA;" width="392" height="59"/>
+		<img class="bordered" data-bind="var: page(hb_banner_right1); format: banner; editor: banner; height:57; width:390; extension: myRIA;" width="390" height="57"/>
 	</div>
 </div>
 

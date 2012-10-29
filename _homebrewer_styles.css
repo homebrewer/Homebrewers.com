@@ -13,6 +13,10 @@ body {
 .loadingBG	{background:url(hb12_red_loading-32x32.gif) no-repeat center center; min-height:28px;}
 
 
+.bordered {
+	border: 1px solid black;
+}
+
 a	{color:#990000;} /* this color should match the color set in zlink */
 a:hover	{color:#990000;}
 

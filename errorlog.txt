@@ -1,0 +1,10 @@
+Homebrewers
+
+PID: 3246
+
+TypeError: responseData['%attribs'] is undefined
+
+if(!responseData['%attribs']['db:id']) {
+model.js (line 782)
+
+Doesn't occur with some other PIDs, needs investigation.  Not replicable on current site.
