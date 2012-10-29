@@ -19,7 +19,7 @@ _gaq.push(['_trackPageview']);
 var myCreole;
 
 var app = {vars:{
-	"release":"20121029123300",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121029024200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
 	"httpsURL":"https://secure.homebrewers.com/s=app.homebrewers.com/",
 	"httpURL":"http://app.homebrewers.com/"
@@ -61,7 +61,7 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 
 
 <!-- what is displayed onLoad until the view is loaded -->
-<div id='appPreView'>
+<div id='appPreView' class="displayNone">
 <div class="contentHolder">
 <table>
 <tr>
@@ -84,7 +84,7 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 
 
 
-<div id='appView' class='displayNone'>
+<div id='appView' class=''>
 <div class="contentHolder">
 <div id="leftColumn">
 	<img class="pointer logo" onClick="showContent('category',{'navcat':'.'}); return false;" src="img/logo.jpg" width="153" height="119" />
