@@ -14,10 +14,13 @@ app.vars.extensions = [
 //	{"namespace":"analytics_google","filename":"extensions/analytics_google.js","callback":"addTriggers"},
 //	{"namespace":"bonding_buysafe","filename":"extensions/bonding_buysafe.js","callback":"addTriggers"},
 	{"namespace":"store_crm","filename":"extensions/store_crm.js"},
-	{"namespace":"myRIA","filename":"quickstart.js","callback":"startMyProgram"}
+	{"namespace":"myRIA","filename":"_homebrewers_quickstart.js","callback":"startMyProgram"}
 	];
-
-
+	
+app.vars.catTemplates = {
+	//'.aatdvarks.videos':'vidCatThumbTemplate'
+}
+	
 /*
 app.vars.scripts is an object containing a list of scripts that are required/desired.
 for each script, include:  
@@ -103,6 +106,51 @@ app.u.appInitComplete = function()	{
 	app.u.loadScriptsByPass(2,true); //loads the rest of the scripts.
 	app.u.dump("Executing myAppIsLoaded code...");
 //display product blob fields in tabbed format.
+
+	app.ext.myRIA.renderFormats.vidSubcatList = function($tag,data)	{
+//				app.u.dump("BEGIN control.renderFormats.subcats");
+//				app.u.dump(data.value);
+				var L = data.value.length;
+				var thisCatSafeID; //used in the loop below to store the cat id during each iteration
+	//			app.u.dump(data);
+				for(var i = 0; i < L; i += 1)	{
+					thisCatSafeID = data.value[i].id;
+					if(data.value[i].id[1] == '$')	{
+						//ignore 'lists', which start with .$
+//						app.u.dump(" -> list! "+data.value[i].id);
+						}
+					else if(!data.value[i].pretty || data.value[i].pretty.charAt(0) == '!')	{
+						//categories that start with ! are 'hidden' and should not be displayed.
+						}
+					else if(!$.isEmptyObject(app.data['appCategoryDetail|'+thisCatSafeID]))	{
+						$tag.append(app.renderFunctions.transmogrify({'id':thisCatSafeID,'catsafeid':thisCatSafeID},data.bindData.loadsTemplate,app.data['appCategoryDetail|'+thisCatSafeID]));
+						}
+					else	{
+						app.u.dump("WARNING - subcategoryList reference to appCategoryDetail|"+thisCatSafeID+" was an empty object.");
+						}
+					}
+					
+			/*
+				var catSafeID; //used in the loop for a short reference.
+				var o = '';
+				if(!$.isEmptyObject(myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail']))	{
+					var L = myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'].length;
+					for(var i = 0; i < L; i +=1)	{
+						if(myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].pretty[0] != '!')	{
+							catSafeID = myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].id;
+							o += "<li class='clearfix padMargBorderBottom' >"
+							o += "<div class='floatLeft pointer' onClick=\"showContent('category',{'navcat':'."+catSafeID+"'});\">";
+							o += myControl.util.makeImage({"name":"design/video_default_catimage","w":155,"h":95,"b":"FFFFFF","class":"catThumb","tag":1});
+							o += "<\/div>"
+							o += myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].pretty;
+							o += "<br \/><button class='watchVideo' onClick=\"myControl.ext.myRIA.util.handlePageContent('category','"+catSafeID+"');\" \/>"
+							o += "<\/li>";
+							}
+						}
+					$tag.append(o);
+					}	*/	
+				};
+
 	app.ext.myRIA.template.productTemplate.onCompletes.push(function(P) {$( "#tabbedProductContent" ).tabs()}) 
 //sample for adding a onInit
 	app.ext.myRIA.template.homepageTemplate.onInits.push(function(P) {

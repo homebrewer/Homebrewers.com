@@ -284,7 +284,20 @@ app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
 
 
 <div id='appTemplates' class='displayNone'>
+<!--
 
+############################
+
+	CUSTOM TEMPLATES
+
+############################
+
+-->
+
+<div id='vidCatThumbTemplate'>
+	<h2  class="redGrit vidSectionHead" data-bind='var: category(pretty); format:text;'></h2>
+	<ul data-bind='var:category(@subcategoryDetail); format:vidSubcatList; extension:myRIA;' class='noListStyle vidSubcats'></ul>
+</div>
 
 <!--
 
