@@ -24,7 +24,7 @@ _gaq.push(['_trackPageview']);
 var myCreole;
 
 var app = {vars:{
-	"release":"20121030113300",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121031034900",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
 	"httpsURL":"https://secure.homebrewers.com/s=www.homebrewers.com/",
 	"httpURL":"http://www.homebrewers.com/"
@@ -1196,12 +1196,12 @@ So the cart template should contain these two elements and the extension should 
 
 		<span title='proceed to secure checkout'><button class='ui-button ui-button-text ui-state-default ui-corner-all checkoutButton' onClick="showContent('checkout',{});">Store Checkout</button></span>
 
-		<span id='paypalECButton' data-bind='var: cart(id); format:paypalECButton;'></span>
-
-		<span id='googleCheckoutButton' class='pointer' data-bind='var: cart(id); format:googleCheckoutButton;'></span>
+		<span id='paypalECButton' data-bind='var: cart(data.order_subtotal); format:paypalECButton;'></span>
+		<!--
+		<span id='googleCheckoutButton' class='pointer' data-bind='var: cart(data.order_subtotal); format:googleCheckoutButton;'></span>
 		
-		<span id='amazonCheckoutButton' class='pointer' data-bind='var: cart(id); format:amazonCheckoutButton;'></span>
-
+		<span id='amazonCheckoutButton' class='pointer' data-bind='var: cart(data.order_subtotal); format:amazonCheckoutButton;'></span>
+		-->
 	</div>
 			
 </section>
