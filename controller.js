@@ -2029,7 +2029,8 @@ if(zGlobals.checkoutSettings.googleCheckoutMerchantId)	{
 	var payObj = app.u.which3PCAreAvailable(); //certain product can be flagged to disable googlecheckout as a payment option.
 	if(payObj.googlecheckout)	{
 	$tag.append("<img height=43 width=160 id='googleCheckoutButton' border=0 src='https://checkout.google.com/buttons/checkout.gif?merchant_id="+zGlobals.checkoutSettings.googleCheckoutMerchantId+"&w=160&h=43&style=trans&variant=text&loc=en_US' \/>").one('click',function(){
-		app.ext.convertSessionToOrder.calls.cartGoogleCheckoutURL.init();
+		//app.ext.convertSessionToOrder.calls.cartGoogleCheckoutURL.init();
+		app.ext.store_checkout.calls.cartGoogleCheckoutURL.init();
 		$(this).addClass('disabled').attr('disabled','disabled');
 		app.model.dispatchThis('immutable');
 		});
