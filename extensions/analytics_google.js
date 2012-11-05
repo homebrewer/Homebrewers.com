@@ -64,9 +64,8 @@ app.ext.myRIA.template.companyTemplate.onCompletes.push(function(P) {_gaq.push([
 app.ext.myRIA.template.customerTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/customer/'+P.show]);}) 
 app.ext.myRIA.template.checkoutTemplate.onInits.push(function(P) {_gaq.push(['_trackPageview', '/checkout']);}) 
 
-app.ext.myRIA.template.searchTemplate.onInits.push(function(P) {
-	pageTracker._trackPageview('/search?KEYWORDS='+P.KEYWORDS); 
-	}) 
+app.ext.myRIA.template.searchTemplate.onInits.push(function(P) {_gaq.push(['_trackPageview', '/search?KEYWORDS='+P.KEYWORDS]);})
+
 
 app.ext.myRIA.template.pageNotFoundTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/404.html?page=' + document.location.pathname + document.location.search + '&from=' + document.referrer]);})
 							

@@ -890,7 +890,7 @@ for legacy browsers. That means old browsers will use the anchor to retain 'back
 //				app.u.dump(" -> R: "+r+" and infoObj.back: "+infoObj.back);
 				if(r == true && infoObj.back == -1)	{
 					var hash = app.ext.myRIA.u.getHashFromPageInfo(infoObj);
-//					app.u.dump(" -> hash from infoObj: "+hash);
+					app.u.dump(" -> hash from infoObj: "+hash);
 //see if hash on URI matches what it should be and if not, change. This will only impact browsers w/out push/pop state support.
 					if(hash != window.location.hash)	{
 						_ignoreHashChange = true; //make sure changing the hash doesn't execute our hashChange code.
