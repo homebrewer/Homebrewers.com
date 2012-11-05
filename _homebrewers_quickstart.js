@@ -1356,7 +1356,11 @@ P.listID (buyer list id)
 				case 'company':
 					relativePath = '#company?show='+P.show;
 					break;
-
+					
+				case 'search':
+					relativePath = '#search?KEYWORDS='+P.KEYWORDS;
+					break;
+					
 				default:
 					//uh oh. what are we?
 					relativePath = P.show;
