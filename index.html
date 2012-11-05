@@ -24,7 +24,7 @@ _gaq.push(['_trackPageview']);
 var myCreole;
 
 var app = {vars:{
-	"release":"20121101015600",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121105102000",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
 	"httpsURL":"https://secure.homebrewers.com/s=www.homebrewers.com/",
 	"httpURL":"http://www.homebrewers.com/"
@@ -378,6 +378,8 @@ don't modify the 'data-templateid' unless you are changing template names and up
 		<img data-bind="var: page(banner1); format: imageURL; editor: banner; height:105; width:796; extension: myRIA;" width="796" height="105"/>
 
 		<h2 data-bind="var: page(header); format: text; editor: text;"></h2>
+		
+		<div class="youtubeVideo" data-bind="var: page(youtube_videoid); format:youtubeVideo; className: youtubeVideo;"></div>
 		
 		<p data-bind="var: page(description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
 		

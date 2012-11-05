@@ -115,6 +115,7 @@ app.u.appInitComplete = function()	{
 //display product blob fields in tabbed format.
 
 	app.ext.myRIA.renderFormats.vidSubcatList = function($tag,data)	{
+			/*
 //				app.u.dump("BEGIN control.renderFormats.subcats");
 //				app.u.dump(data.value);
 				var L = data.value.length;
@@ -136,26 +137,26 @@ app.u.appInitComplete = function()	{
 						app.u.dump("WARNING - subcategoryList reference to appCategoryDetail|"+thisCatSafeID+" was an empty object.");
 						}
 					}
+					*/	
 					
-			/*
 				var catSafeID; //used in the loop for a short reference.
 				var o = '';
-				if(!$.isEmptyObject(myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail']))	{
-					var L = myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'].length;
+				if(!$.isEmptyObject(app.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail']))	{
+					var L = app.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'].length;
 					for(var i = 0; i < L; i +=1)	{
-						if(myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].pretty[0] != '!')	{
-							catSafeID = myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].id;
+						if(app.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].pretty[0] != '!')	{
+							catSafeID = app.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].id;
 							o += "<li class='clearfix padMargBorderBottom' >"
 							o += "<div class='floatLeft pointer' onClick=\"showContent('category',{'navcat':'."+catSafeID+"'});\">";
-							o += myControl.util.makeImage({"name":"design/video_default_catimage","w":155,"h":95,"b":"FFFFFF","class":"catThumb","tag":1});
+							o += app.util.makeImage({"name":"design/video_default_catimage","w":155,"h":95,"b":"FFFFFF","class":"catThumb","tag":1});
 							o += "<\/div>"
-							o += myControl.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].pretty;
-							o += "<br \/><button class='watchVideo' onClick=\"myControl.ext.myRIA.util.handlePageContent('category','"+catSafeID+"');\" \/>"
+							o += app.data['appCategoryDetail|'+data.bindData.cleanValue]['@subcategoryDetail'][i].pretty;
+							o += "<br \/><button class='watchVideo' onClick=\"showContent('category','"+catSafeID+"');\" \/>"
 							o += "<\/li>";
 							}
 						}
 					$tag.append(o);
-					}	*/	
+					}	
 				};
 
 	app.ext.myRIA.template.productTemplate.onCompletes.push(function(P) {$( "#tabbedProductContent" ).tabs()}) 
