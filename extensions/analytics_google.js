@@ -27,7 +27,8 @@ var analytics_google = function() {
 		
 		vars : {
 			"dependAttempts" : 0,  //used to count how many times loading the dependencies has been attempted.
-			"dependencies" : ['myRIA'] //a list of other extensions (just the namespace) that are required for this one to load
+			"dependencies" : ['myRIA'], //a list of other extensions (just the namespace) that are required for this one to load
+			triggeredBounceCode : false
 			},
 
 ////////////////////////////////////   CALLBACKS    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -57,14 +58,14 @@ The addTriggers will re-execute if this script isn't loaded until it has finishe
 					if(app.ext.myRIA && app.ext.myRIA.template && typeof _gaq == 'object')	{
 
 app.u.dump("BEGIN analytics_google.callbacks.addTriggers");
-app.ext.myRIA.template.homepageTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/index.html']);})
-app.ext.myRIA.template.categoryTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/category/'+P.navcat]);})
-app.ext.myRIA.template.productTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/product/'+P.pid]);})
-app.ext.myRIA.template.companyTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/company/'+P.show]);})
-app.ext.myRIA.template.customerTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/customer/'+P.show]);}) 
-app.ext.myRIA.template.checkoutTemplate.onInits.push(function(P) {_gaq.push(['_trackPageview', '/checkout']);}) 
+app.ext.myRIA.template.homepageTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/index.html']); app.ext.analytics_google.u.handleAntiBounceEvent(P);})
+app.ext.myRIA.template.categoryTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/category/'+P.navcat]); app.ext.analytics_google.u.handleAntiBounceEvent(P);})
+app.ext.myRIA.template.productTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/product/'+P.pid]); app.ext.analytics_google.u.handleAntiBounceEvent(P);})
+app.ext.myRIA.template.companyTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/company/'+P.show]); app.ext.analytics_google.u.handleAntiBounceEvent(P);})
+app.ext.myRIA.template.customerTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/customer/'+P.show]); app.ext.analytics_google.u.handleAntiBounceEvent(P);}) 
+app.ext.myRIA.template.checkoutTemplate.onInits.push(function(P) {_gaq.push(['_trackPageview', '/checkout']); app.ext.analytics_google.u.handleAntiBounceEvent(P);}) 
 
-app.ext.myRIA.template.searchTemplate.onInits.push(function(P) {_gaq.push(['_trackPageview', '/search?KEYWORDS='+P.KEYWORDS]);})
+app.ext.myRIA.template.searchTemplate.onInits.push(function(P) {_gaq.push(['_trackPageview', '/search?KEYWORDS='+P.KEYWORDS]); app.ext.analytics_google.u.handleAntiBounceEvent(P);})
 
 
 app.ext.myRIA.template.pageNotFoundTemplate.onCompletes.push(function(P) {_gaq.push(['_trackPageview', '/404.html?page=' + document.location.pathname + document.location.search + '&from=' + document.referrer]);})
@@ -109,7 +110,20 @@ app.ext.store_checkout.checkoutCompletes.push(function(P){
 
 					},
 				onError : function(){}
-				}
+				},
+				
+		u : {
+				handleAntiBounceEvent : function(P)	{
+//see comment up by var triggerBounceCode for what this is for.
+					if(!app.ext.analytics_google.vars.triggeredBounceCode)	{
+						_gaq.push(['_trackEvent','pageView','navigate','','',false]);
+						app.ext.analytics_google.vars.triggeredBounceCode = true;
+						}
+					else	{
+						//catch. 
+						}
+					}
+				} //util
 			} //r object.
 		}
 	return r;
