@@ -111,6 +111,7 @@ app.ext.store_checkout.checkoutCompletes.push(function(P){
 					},
 				onError : function(){}
 				},
+			}, //r object.
 				
 		u : {
 				handleAntiBounceEvent : function(P)	{
@@ -124,7 +125,6 @@ app.ext.store_checkout.checkoutCompletes.push(function(P){
 						}
 					}
 				} //util
-			} //r object.
 		}
 	return r;
 	}
