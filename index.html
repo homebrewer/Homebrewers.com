@@ -25,7 +25,7 @@ _gaq.push(['_trackPageview']);
 var myCreole;
 
 var app = {vars:{
-	"release":"20121107015200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121107022800",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
 	"httpsURL":"https://secure.homebrewers.com/s=www.homebrewers.com/",
 	"httpURL":"http://www.homebrewers.com/"
@@ -620,8 +620,10 @@ this will likely become more flexible in the future. ###
 	<ul title='please choose' id='prodlistChildren' class='listStyleNone fluidList clearfix noPadOrMargin productList smallProdlist' data-bind="var: product(zoovy:grp_children); format:productList; extension:store_prodlist; loadsTemplate:productListTemplateChildren;hide_multipage:true;"></ul>
 
 	
-<!--	<div data-bind='var: product(@inventory.inv); format:simpleInvDisplay; extension:store_product;' class='inventory'></div> -->
+<!--
+	<div data-bind='var: product(@inventory.inv); format:simpleInvDisplay; extension:store_product;' class='inventory'></div> 
 	<div data-bind='var: product(zoovy:ship_latency); format:text;pretext:Normally ships in ;posttext: day(s);' class='latency'></div>
+-->
 	
 <!--
 you'll likely want to something MUCH more custom here. this just simply adds it to the cart and reports a success. it can be used, if desired. 
