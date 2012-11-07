@@ -11,6 +11,7 @@
 
 
 <script type="text/javascript">
+//<![CDATA[
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-841679-1']);
 _gaq.push(['_trackPageview']);
@@ -24,7 +25,7 @@ _gaq.push(['_trackPageview']);
 var myCreole;
 
 var app = {vars:{
-	"release":"20121105024200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"20121107015200",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"baseURL":"",
 	"httpsURL":"https://secure.homebrewers.com/s=www.homebrewers.com/",
 	"httpURL":"http://www.homebrewers.com/"
@@ -36,6 +37,7 @@ if(document.location.protocol != 'file:')	{
 	app.vars.baseURL  = "https:" == document.location.protocol ? app.vars.httpsURL : app.vars.httpURL; 
 	document.getElementsByTagName('base')[0].href = app.vars.baseURL;
 	}
+//]]>
 </script>
 
 
@@ -54,7 +56,9 @@ css files should be included before any .js file to ensure they are downloaded i
 <script type="text/javascript" src="loadscript.js"></script>
 
 <script type="text/javascript">
+//<![CDATA[
 app.u.loadScript(app.vars.baseURL+"_homebrewer_init.js");
+//]]>
 </script>
 
 
@@ -646,7 +650,17 @@ you'll likely want to something MUCH more custom here. this just simply adds it 
 	<a href='#' onClick="app.ext.myRIA.a.add2BuyerList({pid:$(this).parent().attr('data-pid'),'listid':'wishlist'}); return false;">Add to Wishlist</a>
 
 	</menu>
-
+	
+	<!-- AddThis Button BEGIN -->
+	<div class="addthis_toolbox addthis_default_style ">
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	<a class="addthis_button_tweet"></a>
+	<a class="addthis_button_pinterest_pinit"></a>
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-509ad66f2d04446a"></script>
+	<!-- AddThis Button END -->
+	
 	<span id="buySAFE_Kicker" name="buySAFE_Kicker" type="Kicker Guaranteed Transparent 33 175x30"></span>
 	</td>
 </tr>

@@ -64,7 +64,7 @@ P.query = { 'and':{ 'filters':[ {'term':{'profile':'E31'}},{'term':{'tags':'IS_S
 // to get a good handle on what datapointers should look like.
 		appPublicSearch : {
 			init : function(obj,tagObj,Q)	{
-//				app.u.dump("BEGIN app.ext.store_search.calls.appPublicSearch");
+				app.u.dump("BEGIN app.ext.store_search.calls.appPublicSearch");
 //				app.u.dump(obj);
 				this.dispatch(obj,tagObj,Q)
 				return 1;
@@ -224,6 +224,9 @@ P.parentID - The parent ID is used as the pointer in the multipage controls obje
 				qObj.type = 'product';
 				qObj.mode = 'elastic-native';
 				qObj.size = 250;
+				qObj.range = {
+					"base_price" : {"gte" : 1}
+				};
 				qObj.query =  {"query_string" : {"query" : keywords}};
 				if(typeof tagObj != 'object')	{tagObj = {}};
 				tagObj.datapointer = "appPublicSearch|"+keywords
