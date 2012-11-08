@@ -290,7 +290,7 @@ input.addToCartButton	{background: url(img/hb12_addtocart-154x55.png) top left n
 
 .prodSummaryContainer h6	{margin-bottom:12px; font-weight:normal} /* pid */
 
-.priceContainer	{margin-bottom:12px; font-size:1em;}
+.priceContainer	{font-size:1em;}
 .prodSummaryContainer .basePrice	{color:#022d1d; font-size:1.4em;} /* price */
 .prodSummaryContainer .retailPrice	{color:#000000;} /* msrp */
 .prodSummaryContainer .retailPrice .value	{text-decoration:line-through;}
