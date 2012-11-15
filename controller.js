@@ -847,11 +847,11 @@ commented out in 201238
 			
 			determineAuthentication : function(){
 				var r = 'none';
-				if(this.thisIsAnAdminSession())	{
-					r = 'admin';
-					}
+//				if(this.thisIsAnAdminSession())	{
+	//				r = 'admin';
+		//			}
 //was running in to an issue where cid was in local, but user hadn't logged in to this session yet, so now both cid and username are used.
-				else if(app.data.appBuyerLogin && app.data.appBuyerLogin.cid)	{r = 'authenticated'}
+				if(app.data.appBuyerLogin && app.data.appBuyerLogin.cid)	{r = 'authenticated'}
 				else if(app.vars.cid && app.u.getUsernameFromCart())	{r = 'authenticated'}
 				else if(app.model.fetchData('cartItemsList') && app.u.isSet(app.data.cartItemsList.cart.cid))	{
 					r = 'authenticated';
